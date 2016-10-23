@@ -48,8 +48,11 @@ function loadView($module, $name){
 
 	// Si le fichier de config a été trouvé, on décode le json et on le retourne sous forme d'objet
 	if(file_exists($path)){
+
+		// On extrait le tableaux de variable global pour récuperer les variable déclarer dans le fichier 
+		extract($GLOBALS);
+
 		include $path;
-		die;
 	}
 	else // Sinon 
 	{
