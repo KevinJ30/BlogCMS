@@ -1,8 +1,9 @@
 {
+	"debug" : true,
 
 	"database" : {
 		"host" : "localhost",
-		"dbname" : "BlogCMS",
+		"dbname" : "blog_cms",
 		"username" : "root",
 		"password" : ""
 	}	

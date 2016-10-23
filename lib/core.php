@@ -1,5 +1,4 @@
 <?php
-
 /*********************************************************** 
  * Contients toutes les fonctions du core de l'application *
  ***********************************************************/
@@ -59,3 +58,17 @@ function loadView($module, $name){
 		die();
 	}
 }
+
+function display_errors(){
+	echo '1111';
+	// load config
+	$config = loadConfig("GENERAL_config.json");
+
+	if(!$config->debug){
+		ini_set("display_errors", 0);
+	}
+}
+
+// Affiche les messages d'erreur en fonction du mode choisie
+display_errors();
+
