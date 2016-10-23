@@ -46,5 +46,16 @@ function loadConfig($file){
  * @return void : inclut la page de vue
  **/
 function loadView($module, $name){
+	$path = basePath().'views/'.strtolower($module).'/'.strtolower($name);
 
+	// Si le fichier de config a été trouvé, on décode le json et on le retourne sous forme d'objet
+	if(file_exists($path)){
+		include $path;
+		die;
+	}
+	else // Sinon 
+	{
+		throw new Exception("La vue \"$name\" du module \"$module\" n'a pu êtres trouvé !");
+		die();
+	}
 }
