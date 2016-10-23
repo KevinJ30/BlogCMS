@@ -33,7 +33,6 @@ function loadConfig($file){
 		throw new Exception("Le fichier de configuration n'a pu êtres trouvé !");
 		die();
 	}
-
 }
 
 /**
@@ -65,6 +64,22 @@ function display_errors(){
 
 	if(!$config->debug){
 		ini_set("display_errors", 0);
+	}
+}
+
+function loadTemplate($file){
+	$path = templatePath().$file;
+
+	// Si le fichier de config a été trouvé, on décode le json et on le retourne sous forme d'objet
+	if(file_exists($path)){
+
+		include $path;
+
+	}
+	else // Sinon 
+	{
+		throw new Exception("Le fichier de template n'a pu êtres trouvé !");
+		die();
 	}
 }
 

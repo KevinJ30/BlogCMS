@@ -23,3 +23,11 @@ function basePath(){
 function configPath(){
 	return basePath().'config/';
 }
+
+/**
+ * templatePath : permet d'indiquer le chemin du dossier template
+ * @return : chemin du dossier template
+ **/
+function templatePath(){
+	return basePath().'templates/';
+}
