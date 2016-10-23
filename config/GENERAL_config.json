@@ -1,0 +1,10 @@
+{
+
+	"database" : {
+		"host" : "localhost",
+		"dbname" : "BlogCMS",
+		"username" : "root",
+		"password" : ""
+	}	
+
+}
