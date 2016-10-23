@@ -60,7 +60,6 @@ function loadView($module, $name){
 }
 
 function display_errors(){
-	echo '1111';
 	// load config
 	$config = loadConfig("GENERAL_config.json");
 
