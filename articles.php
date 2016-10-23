@@ -9,8 +9,6 @@
 
 require "lib/includes.php";
 
-var_dump(bdd_query('SELECT * FROM articles'));
-
 // Chargement de la vue
 loadView("articles", "list.view.php");
 ?>
