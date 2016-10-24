@@ -1,13 +1,22 @@
 <?php
 
 require "lib/includes.php";
+
+if(isset($_GET['id']) && !empty($_GET['id'])){
+	$id = $_GET['id'];
+	$article = bdd_query('SELECT * FROM articles WHERE id='.$id, true);
+
+	if(!$article){
+		redirect_404();
+	}
+}
+else
+{
+	redirect_404();
+}
+
+// Chargement des template et des vues
 loadTemplate("header.html");
-
-// chargement de la liste des articles
-$articles = bdd_query('SELECT * FROM articles WHERE activated = 1');
-
-// Chargement de la vue
-loadView("articles", "list.view.php");
-
+loadView("articles", "article.view.php");
 loadTemplate("footer.html");
 

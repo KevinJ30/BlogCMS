@@ -86,6 +86,25 @@ function loadTemplate($file){
 	}
 }
 
+/**
+ * redirect($url)
+ * 
+ * Effectue une redirection sur le site
+ * @param $url : url de la redirection
+ * @return void 
+ **/
+function redirect($url){
+	header('Location: '.$url);
+}
+
+/**
+ * redirect_404()
+ * 
+ **/
+function redirect_404(){
+	header('Location: ./404.html');
+}
+
 // Affiche les messages d'erreur en fonction du mode choisie
 display_errors();
 
