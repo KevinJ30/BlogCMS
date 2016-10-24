@@ -2,6 +2,8 @@
 
 require "lib/includes.php";
 
+auth_authorized('admin');
+
 if(isset($_GET['id']) && !empty($_GET['id'])){
 	$id = $_GET['id'];
 	$article = bdd_query('SELECT * FROM articles WHERE id='.$id, true);

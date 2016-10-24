@@ -1,6 +1,6 @@
 <?php
-
 require "lib/includes.php";
+
 loadTemplate("header.html");
 
 // chargement de la liste des articles
