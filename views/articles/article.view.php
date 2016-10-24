@@ -1,5 +1,6 @@
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-12" style="margin-top:30px">
+		<a href="index.php" class="btn btn-info"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Revenir a la liste</a>
 		<h1><?= $article->title ?></h1>
 		<small>Crée le : <?= $article->created ?></small> <br />
 		<small>Modifié le : <?= $article->modified ?></small> <br />
