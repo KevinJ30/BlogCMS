@@ -2,7 +2,7 @@
 
 require "lib/includes.php";
 
-auth_authorized('admin');
+auth_authorized('membre');
 
 if(isset($_GET['id']) && !empty($_GET['id'])){
 	$id = $_GET['id'];

@@ -2,7 +2,7 @@
 	<div class="col-md-12">
 		<h1>Authentification</h1>
 		<hr />
-		<form action="login.php" method="POST">
+		<form action="" method="POST">
 			<div class="form-group">
 				<label>Nom d'utilisateur :</label>
 				<input type="text" name="username" class="form-control" placeholder="Nom d'utilisateur">

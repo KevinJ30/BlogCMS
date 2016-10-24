@@ -6,6 +6,7 @@
 
 	/**
 	 * session_get($key) : récupére la valeur de la clé
+	 * 
 	 * @param $key : clé du tableaux
 	 * @return retourne la valeur de la session
 	 **/
@@ -27,6 +28,40 @@
 	 **/
 	function session_set($key, $value){
 		$_SESSION[$key] = $value;
+	}
+
+	/**
+	 * session_setFlash($type, $message) : Ajoute un message flash à la session
+	 * 
+	 * @param $type : type du message flash
+	 * @param $message : message
+	 * @return void
+	 **/
+	function session_setFlash($type, $message){
+		$_SESSION['flash'] = [
+			'type' => $type,
+			'message' => $message
+		];
+	}
+
+	/**
+	 * session_drawFlash() : affiche le message flash
+	 * 
+	 * @return void 
+	 **/
+	function session_drawFlash(){
+		if(isset($_SESSION['flash'])){
+			$GLOBALS['flash'] = $_SESSION['flash']; 
+
+			// On supprime la session aprés lecture
+			unset($_SESSION['flash']);
+
+			// On charge la vue falsh.html
+			loadView('flash', 'flash.html');
+
+			// Une fois la vue charger on supprime la globals
+			unset($GLOBALS['flash']);
+		}
 	}
 
 	// Démarrage de la session

@@ -14,10 +14,5 @@ require "globals.php"; // Contient toutes les fonctions lier au variable global 
 // SYSTEMES
 require "Auth.php";
 
-$_SESSION['auth'] = [
-	'username' => 'kevin',
-	'mail' => 'kevin.joudrier@labcodecenter.com',
-	'permission' => 'membre'
-];
-
 request_isPost();
+

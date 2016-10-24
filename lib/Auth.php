@@ -31,5 +31,19 @@ function auth_authorized($permission){
 
 	}
 
+	session_setFlash('danger', "Vous n'avez les droit suffisant pour accèder à cette page.<br />Il vous faut la permission <strong>$permission</strong> pour accèder à cette page.");
 	redirect('login.php');
+	die;
+}
+
+/**
+ * auth_encryptPassword($password)
+ *
+ * Encrypte le mot de passe en sha1
+ * @param string $password : mot de passe à encrypté
+ * @return string : mot de passe encrypté
+ *
+ **/
+function auth_encryptPassword($password){
+	return sha1($password);
 }

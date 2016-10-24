@@ -105,6 +105,16 @@ function redirect_404(){
 	header('Location: ./404.html');
 }
 
+/**
+ * Redirige l'utilisateur d'ou il vient
+ * 
+ * @return void
+ **/
+function redirect_referer(){
+	redirect(request_referer());
+	die;
+}
+
 // Affiche les messages d'erreur en fonction du mode choisie
 display_errors();
 

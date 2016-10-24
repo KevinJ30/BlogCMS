@@ -36,3 +36,11 @@ function request_getData($secure = true){
 function request_isPost(){
 	return isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] == "POST" ? true : false;
 }
+
+/**
+ * request_referer() : url referer
+ * @return string : referer
+ **/
+function request_referer(){
+	return $_SERVER['HTTP_REFERER'];
+}
