@@ -1,6 +1,8 @@
+    <?php if(auth_isConnected()) : ?>
     <!-- Affichage de la session -->
     <?php var_dump($_SESSION, $_SERVER) ?>
 
+<?php endif; ?>
     </div><!-- /.container -->
 
 
